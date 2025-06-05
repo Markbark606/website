@@ -1,8 +1,7 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/dog-waste-removal/index.html b/dog-waste-removal/index.html
-new file mode 100644
-index 0000000000000000000000000000000000000000..e86b326dee6621b3f93b839d387120330540fd48
---- /dev/null
+diff --git a//dev/null b/dog-waste-removal/index.html
+index 0000000000000000000000000000000000000000..e86b326dee6621b3f93b839d387120330540fd48 100644
+--- a//dev/null
 +++ b/dog-waste-removal/index.html
 @@ -0,0 +1,36 @@
 +<!DOCTYPE html>
@@ -41,44 +40,6 @@ index 0000000000000000000000000000000000000000..e86b326dee6621b3f93b839d38712033
 +    </footer>
 +</body>
 +</html>
-diff --git a/dog-waste-removal/style.css b/dog-waste-removal/style.css
-new file mode 100644
-index 0000000000000000000000000000000000000000..0bea5f1dcb6fab3cdb5020045c8c9887c6c6b115
---- /dev/null
-+++ b/dog-waste-removal/style.css
-@@ -0,0 +1,32 @@
-+body {
-+    font-family: Arial, sans-serif;
-+    margin: 0;
-+    padding: 0;
-+    background: #f4f4f4;
-+    color: #333;
-+}
-+
-+header {
-+    background: #71b37c;
-+    color: white;
-+    padding: 1rem;
-+    text-align: center;
-+}
-+
-+main {
-+    max-width: 800px;
-+    margin: 2rem auto;
-+    padding: 0 1rem;
-+}
-+
-+.services ul {
-+    list-style-type: disc;
-+    margin-left: 2rem;
-+}
-+
-+footer {
-+    background: #71b37c;
-+    color: white;
-+    text-align: center;
-+    padding: 0.5rem;
-+}
  
 EOF
 )
