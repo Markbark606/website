@@ -1,1 +1,84 @@
-
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/dog-waste-removal/index.html b/dog-waste-removal/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..e86b326dee6621b3f93b839d387120330540fd48
+--- /dev/null
++++ b/dog-waste-removal/index.html
+@@ -0,0 +1,36 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Dog Waste Removal</title>
++    <link rel="stylesheet" href="style.css">
++</head>
++<body>
++    <header>
++        <h1>Dog Waste Removal Services</h1>
++    </header>
++    <main>
++        <section class="intro">
++            <h2>Keep Your Yard Clean and Healthy</h2>
++            <p>Our professional team offers reliable and affordable dog waste removal for residential and commercial properties.</p>
++        </section>
++        <section class="services">
++            <h3>Our Services</h3>
++            <ul>
++                <li>One-time cleanup</li>
++                <li>Weekly or monthly maintenance</li>
++                <li>Commercial property cleanup</li>
++            </ul>
++        </section>
++        <section class="contact">
++            <h3>Contact Us</h3>
++            <p>Email: <a href="mailto:info@dogwasteremoval.com">info@dogwasteremoval.com</a></p>
++            <p>Phone: (555) 123-4567</p>
++        </section>
++    </main>
++    <footer>
++        <p>&copy; 2023 Dog Waste Removal Services</p>
++    </footer>
++</body>
++</html>
+diff --git a/dog-waste-removal/style.css b/dog-waste-removal/style.css
+new file mode 100644
+index 0000000000000000000000000000000000000000..0bea5f1dcb6fab3cdb5020045c8c9887c6c6b115
+--- /dev/null
++++ b/dog-waste-removal/style.css
+@@ -0,0 +1,32 @@
++body {
++    font-family: Arial, sans-serif;
++    margin: 0;
++    padding: 0;
++    background: #f4f4f4;
++    color: #333;
++}
++
++header {
++    background: #71b37c;
++    color: white;
++    padding: 1rem;
++    text-align: center;
++}
++
++main {
++    max-width: 800px;
++    margin: 2rem auto;
++    padding: 0 1rem;
++}
++
++.services ul {
++    list-style-type: disc;
++    margin-left: 2rem;
++}
++
++footer {
++    background: #71b37c;
++    color: white;
++    text-align: center;
++    padding: 0.5rem;
++}
+ 
+EOF
+)
